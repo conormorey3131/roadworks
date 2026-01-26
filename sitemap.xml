@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage - Highest Priority -->
+    <url>
+        <loc>https://roadworksire.com/</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://roadworksire.com/public/cars/featured-build-01/01.jpg</image:loc>
+            <image:title>Josh's Nissan S15 Silvia</image:title>
+            <image:caption>Josh's S15 Silvia featured on Roadworks IRE</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Blog Main Page -->
+    <url>
+        <loc>https://roadworksire.com/blog.html</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Featured Blog Post - Josh's S15 -->
+    <url>
+        <loc>https://roadworksire.com/blog/featured-build-01.html</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <image:image>
+            <image:loc>https://roadworksire.com/public/cars/featured-build-01/06.jpg</image:loc>
+            <image:title>Josh's S15 Side Profile</image:title>
+            <image:caption>Side profile of Josh's S15 Silvia at golden hour</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://roadworksire.com/public/cars/featured-build-01/01.jpg</image:loc>
+            <image:title>Josh's S15 Front View</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://roadworksire.com/public/cars/featured-build-01/02.jpg</image:loc>
+            <image:title>SR20DET Engine Bay</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Intro/About Page -->
+    <url>
+        <loc>https://roadworksire.com/intro.html</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Featured Sections -->
+    <url>
+        <loc>https://roadworksire.com/featured-sheds.html</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://roadworksire.com/sunroof.html</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://roadworksire.com/projects.html</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://roadworksire.com/events.html</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset>

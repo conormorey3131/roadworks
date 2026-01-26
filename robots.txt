@@ -1,0 +1,29 @@
+# Robots.txt for Roadworks IRE
+# https://roadworksire.com
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Crawl-delay: 1
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /public/cars/
+Allow: /public/brand/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://roadworksire.com/sitemap.xml
+
+# Host preference
+Host: https://roadworksire.com

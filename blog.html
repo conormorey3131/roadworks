@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Blog Ireland | Josh's S15 Feature (Juicebox) | Roadworks IRE</title>
+    <meta name="description" content="Premium automotive content from Ireland. Featured: Josh's Nissan S15 Silvia (Juicebox) with 40-image gallery. Irish car culture, builds, and photography by Roadworks IRE.">
+    <meta name="keywords" content="automotive blog Ireland, Josh Juicebox S15, Irish car builds, JDM Ireland, drift cars, modified cars Ireland, Roadworks IRE blog">
+    <link rel="canonical" href="https://roadworksire.com/blog.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/brand/logo.png">
+    <link rel="shortcut icon" type="image/png" href="public/brand/logo.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Automotive Blog - Josh's S15 Feature (Juicebox)">
+    <meta property="og:description" content="Premium automotive content from Ireland featuring Josh's S15 Silvia (Juicebox) and more.">
+    <meta property="og:image" content="https://roadworksire.com/public/cars/featured-build-01/01.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Roadworks IRE Blog",
+        "description": "Premium automotive content from Ireland",
+        "url": "https://roadworksire.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Roadworks IRE"
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Josh from Juicebox's S15: Three Years in the Making",
+                "url": "https://roadworksire.com/blog/featured-build-01.html",
+                "image": "https://roadworksire.com/public/cars/featured-build-01/06.jpg",
+                "datePublished": "2024-01-26",
+                "author": {
+                    "@type": "Person",
+                    "name": "Noah"
+                },
+                "about": {
+                    "@type": "Car",
+                    "name": "Josh's Nissan S15 Silvia",
+                    "owner": "Josh (Juicebox)"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300 scrolled">
+        <div class="container max-w-7xl mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <a href="index.html" class="logo">
+                    <span class="font-display text-2xl md:text-3xl tracking-wider">ROADWORKS IRE</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="intro.html" class="nav-link">Intro</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="featured-sheds.html" class="nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="nav-link">Sunroof</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobile-menu-overlay"></div>
+        <div class="absolute right-0 top-0 h-full w-64 bg-white shadow-2xl transform translate-x-full transition-transform" id="mobile-menu-panel">
+            <div class="p-4 pt-20">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                    <a href="intro.html" class="mobile-nav-link">Intro</a>
+                    <a href="blog.html" class="mobile-nav-link active">Blog</a>
+                    <a href="featured-sheds.html" class="mobile-nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="mobile-nav-link">Sunroof</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="events.html" class="mobile-nav-link">Events</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="pt-20">
+        <section class="py-12 px-4">
+            <div class="container max-w-7xl mx-auto">
+                <div class="mb-12 fade-in">
+                    <h1 class="font-display text-5xl md:text-6xl mb-4">Blog</h1>
+                    <p class="text-gray-600 text-lg">Stories from the garage and the track</p>
+                </div>
+                
+                <!-- Featured Post -->
+                <div class="mb-12 fade-in">
+                    <a href="blog/featured-build-01.html" class="post-card featured group">
+                        <div class="relative aspect-[21/9] overflow-hidden bg-gray-100">
+                            <img src="public/cars/featured-build-01/01.jpg" alt="Josh's S15" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-theme text-white px-3 py-1 rounded-full text-sm font-semibold">Featured</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <h3 class="font-display text-3xl md:text-4xl mb-2">Josh's S15: Three Years in the Making</h3>
+                                <p class="text-white/90 mb-2 max-w-2xl">Exclusive feature on Josh's legendary S15 Silvia (Juicebox). One of Europe's finest builds with 360hp SR20DET.</p>
+                                <div class="flex items-center text-sm text-white/80 space-x-4">
+                                    <span>January 26, 2024</span>
+                                    <span>3 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- More Content Coming Soon -->
+                <div class="text-center py-20 fade-in">
+                    <h3 class="font-display text-3xl mb-4 text-gray-400">More Stories Coming Soon</h3>
+                    <p class="text-gray-500 max-w-md mx-auto">
+                        We're working on bringing you more amazing content. Follow us on Instagram to stay updated!
+                    </p>
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" class="btn btn-theme mt-6">
+                        Follow on Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-20">
+        <div class="container max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
+                    <p class="text-gray-400 mb-4">Where Performance Meets Passion. Follow our journey through the world of automotive excellence.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/roadworks.ire/" target="_blank" class="text-gray-400 hover:text-white transition-colors">INSTAGRAM</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">YOUTUBE</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">ICCR</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <nav class="flex flex-col space-y-2">
+                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                        <a href="featured-sheds.html" class="text-gray-400 hover:text-white transition-colors">Featured Sheds</a>
+                        <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                        <a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <nav class="flex flex-col space-y-2">
+                        <a href="intro.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                        <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
