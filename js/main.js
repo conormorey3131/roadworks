@@ -78,7 +78,7 @@ function initMobileMenu() {
     });
 }
 
-// Intersection Observer for animations
+// Intersection Observer for animations - DISABLED FOR IMAGES
 function initAnimations() {
     const observerOptions = {
         threshold: 0.1,
@@ -95,12 +95,15 @@ function initAnimations() {
         });
     }, observerOptions);
     
-    // Apply to fade-in elements
+    // Apply to fade-in elements BUT NOT THE GALLERY
     document.querySelectorAll('.fade-in').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(el);
+        // Skip gallery and anything with images
+        if (!el.querySelector('img') && !el.classList.contains('gallery-grid')) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        }
     });
 }
 
@@ -247,48 +250,16 @@ function updateCopyrightYear() {
     });
 }
 
-// Simple image loading - no complex lazy loading that can break on mobile
+// Simple image loading - just ensure visibility
 function initImageLoading() {
     const images = document.querySelectorAll('img');
     
     images.forEach(img => {
-        // Skip if no src or src is not a valid image path
-        if (!img.src || img.src.includes('.html') || img.src === window.location.href) {
-            console.warn(`Skipping invalid image src: ${img.src}`);
-            return;
-        }
-        
-        // Force all images to be visible immediately
+        // Just make sure images are visible
         img.style.opacity = '1';
         img.style.display = 'block';
-        
-        // Remove any loading classes that might hide images
         img.classList.remove('loading');
-        
-        // Ensure images are loaded
-        if (!img.complete) {
-            img.onload = function() {
-                this.style.opacity = '1';
-                this.classList.add('loaded');
-            };
-            
-            img.onerror = function() {
-                // Only process if this is actually an image path
-                if (this.src && !this.src.includes('.html') && this.src !== window.location.href) {
-                    console.warn('Failed to load image:', this.src);
-                    // Try encoded version if it has special characters
-                    if (this.src.includes(' ') || this.src.includes('(') || this.src.includes(')')) {
-                        const encodedSrc = encodeImageSrc(this.src);
-                        if (encodedSrc !== this.src) {
-                            console.log('Retrying with encoded path:', encodedSrc);
-                            this.src = encodedSrc;
-                        }
-                    }
-                }
-            };
-        } else {
-            img.classList.add('loaded');
-        }
+        img.classList.add('loaded');
     });
 }
 
@@ -479,18 +450,12 @@ function handleResize() {
     optimizeImages();
 }
 
-// Force immediate image visibility to prevent browser interventions
+// Simple image visibility
 function forceImageVisibility() {
     const allImages = document.querySelectorAll('img');
     allImages.forEach(img => {
-        // Only process images with valid src attributes
-        if (img.src && !img.src.includes('.html') && img.src !== window.location.href) {
-            img.style.opacity = '1';
-            img.style.display = 'block';
-            img.style.visibility = 'visible';
-            // Force the browser to load the image immediately
-            img.loading = 'eager';
-        }
+        img.style.opacity = '1';
+        img.style.display = 'block';
     });
 }
 
@@ -499,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initHeader();
     initMobileMenu();
-    initAnimations();
+    initAnimations(); // Re-enabled with image protection
     initGallery();
     initProgressBar();
     initSmoothScroll();
@@ -507,18 +472,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initLoadMore();
     updateCopyrightYear();
     
-    // Initialize simple image loading
-    initImageLoading();
-    addImageErrorHandling();
-    optimizeImages();
-    
-    // Force immediate image visibility
-    forceImageVisibility();
-    
-    // Single fallback after page load
-    setTimeout(() => {
-        forceImageVisibility();
-    }, 1000);
 });
 
 // Handle window resize

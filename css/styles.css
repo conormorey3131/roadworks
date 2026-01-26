@@ -591,12 +591,11 @@ body {
     }
 }
 
-/* Image Loading Optimization */
+/* Basic image styles */
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    opacity: 1 !important; /* Force all images to be visible */
 }
 
 /* Image loading states */
@@ -729,17 +728,6 @@ section[class*="h-["][class*="vh"] .absolute.inset-0 img {
     display: block !important; /* Ensure they're not hidden */
 }
 
-/* Loading State */
-.loading {
-    opacity: 1 !important; /* Override - keep images visible even when loading */
-    pointer-events: auto;
-}
-
-/* Force all images to be visible regardless of loading state */
-img.loading {
-    opacity: 1 !important;
-    display: block !important;
-}
 
 /* Image error state */
 .image-error {
