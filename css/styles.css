@@ -729,6 +729,93 @@ section[class*="h-["][class*="vh"] .absolute.inset-0 img {
 }
 
 
+/* Dark Mode Support for Blog Content */
+@media (prefers-color-scheme: dark) {
+    /* Blog text content */
+    .text-gray-700,
+    .text-gray-600,
+    .text-gray-500 {
+        color: #d1d5db !important; /* Light gray for dark mode */
+    }
+    
+    /* Prose content in blog posts */
+    .prose p,
+    .prose li,
+    .prose dd {
+        color: #e5e7eb !important; /* Even lighter gray for better readability */
+    }
+    
+    /* Headings in dark mode */
+    .prose h1,
+    .prose h2,
+    .prose h3,
+    .prose h4,
+    .prose h5,
+    .prose h6 {
+        color: #f3f4f6 !important;
+    }
+    
+    /* Strong/bold text */
+    .prose strong,
+    .prose b {
+        color: #f9fafb !important;
+    }
+    
+    /* Background adjustments for cards */
+    .bg-gray-50 {
+        background-color: rgba(31, 41, 55, 0.5) !important;
+    }
+    
+    /* Technical specifications table */
+    .text-gray-900 {
+        color: #f3f4f6 !important;
+    }
+    
+    /* Post cards on blog listing page */
+    .post-card {
+        background: #1f2937;
+    }
+    
+    .post-card h3 {
+        color: #f3f4f6 !important;
+    }
+    
+    .post-card p {
+        color: #d1d5db !important;
+    }
+    
+    /* Links in dark mode */
+    .prose a {
+        color: #60a5fa !important;
+    }
+    
+    /* Mobile navigation panel in dark mode */
+    #mobile-menu-panel {
+        background: #1f2937 !important;
+        color: #f3f4f6 !important;
+    }
+    
+    .mobile-nav-link {
+        color: #d1d5db !important;
+    }
+    
+    .mobile-nav-link:hover {
+        background: #374151 !important;
+        color: #f3f4f6 !important;
+    }
+}
+
+/* Additional high contrast mode support */
+@media (prefers-contrast: high) {
+    .text-gray-700,
+    .text-gray-600,
+    .prose p,
+    .prose li,
+    .prose dd {
+        color: #f3f4f6 !important;
+    }
+}
+
 /* Image error state */
 .image-error {
     background: #f3f4f6 !important;
