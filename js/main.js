@@ -116,12 +116,19 @@ function initGallery() {
     const closeBtn = document.getElementById('lightbox-close');
     const prevBtn = document.getElementById('lightbox-prev');
     const nextBtn = document.getElementById('lightbox-next');
-    
+
     if (!galleryItems.length || !lightbox) return;
-    
+
     let currentIndex = 0;
     const images = Array.from(galleryItems).map(item => item.querySelector('img').src);
-    
+
+    // Touch swipe variables
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    const minSwipeDistance = 50;
+
     function showImage(index) {
         currentIndex = index;
         lightboxImg.src = images[index];
@@ -129,43 +136,126 @@ function initGallery() {
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-    
+
     function closeGallery() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
     }
-    
+
     function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
     }
-    
+
     function prevImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         showImage(currentIndex);
     }
-    
+
+    // Handle swipe gesture
+    function handleSwipe() {
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+
+        // Only trigger if horizontal swipe is greater than vertical (prevents scroll conflicts)
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+            if (deltaX > 0) {
+                prevImage(); // Swipe right = previous
+            } else {
+                nextImage(); // Swipe left = next
+            }
+        }
+    }
+
     // Event listeners
     galleryItems.forEach((item, index) => {
         item.addEventListener('click', () => showImage(index));
     });
-    
+
     closeBtn?.addEventListener('click', closeGallery);
     prevBtn?.addEventListener('click', prevImage);
     nextBtn?.addEventListener('click', nextImage);
-    
+
+    // Touch events for swipe navigation
+    lightbox?.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    lightbox?.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+    }, { passive: true });
+
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
-        
+
         if (e.key === 'Escape') closeGallery();
         if (e.key === 'ArrowRight') nextImage();
         if (e.key === 'ArrowLeft') prevImage();
     });
-    
+
     // Close on background click
     lightbox?.addEventListener('click', (e) => {
         if (e.target === lightbox) closeGallery();
+    });
+}
+
+// Share functionality
+function initShareButtons() {
+    const shareButtons = document.querySelectorAll('[data-share]');
+
+    shareButtons.forEach(button => {
+        button.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const shareType = button.dataset.share;
+            const url = window.location.href;
+            const title = document.title;
+
+            switch (shareType) {
+                case 'copy':
+                    try {
+                        await navigator.clipboard.writeText(url);
+                        const originalText = button.innerHTML;
+                        button.innerHTML = `
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Copied!
+                        `;
+                        button.classList.add('bg-green-600');
+                        setTimeout(() => {
+                            button.innerHTML = originalText;
+                            button.classList.remove('bg-green-600');
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Failed to copy:', err);
+                    }
+                    break;
+
+                case 'whatsapp':
+                    window.open(`https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`, '_blank');
+                    break;
+
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, '_blank');
+                    break;
+
+                case 'native':
+                    if (navigator.share) {
+                        try {
+                            await navigator.share({ title, url });
+                        } catch (err) {
+                            if (err.name !== 'AbortError') {
+                                console.error('Share failed:', err);
+                            }
+                        }
+                    }
+                    break;
+            }
+        });
     });
 }
 
@@ -247,6 +337,29 @@ function updateCopyrightYear() {
     const currentYear = new Date().getFullYear();
     yearElements.forEach(el => {
         el.textContent = currentYear;
+    });
+}
+
+// Back to Top button
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (!backToTopBtn) return;
+
+    const scrollThreshold = 400;
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > scrollThreshold) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 }
 
@@ -459,9 +572,110 @@ function forceImageVisibility() {
     });
 }
 
+// Dark Mode Toggle
+function initDarkMode() {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const mobileDarkModeToggle = document.getElementById('mobile-dark-mode-toggle');
+    const html = document.documentElement;
+
+    // Check for saved preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        html.classList.add('dark');
+    }
+
+    function toggleDarkMode() {
+        html.classList.toggle('dark');
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    }
+
+    if (mobileDarkModeToggle) {
+        mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
+    }
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+    });
+}
+
+// Image Skeleton Loading
+function initImageSkeletons() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const postCardImages = document.querySelectorAll('.post-card img');
+
+    // Add loading class to gallery items
+    galleryItems.forEach(item => {
+        const img = item.querySelector('img');
+        if (!img) return;
+
+        // Add loading state
+        item.classList.add('loading');
+
+        // Remove loading state when image loads
+        if (img.complete) {
+            item.classList.remove('loading');
+        } else {
+            img.addEventListener('load', () => {
+                item.classList.remove('loading');
+            });
+            img.addEventListener('error', () => {
+                item.classList.remove('loading');
+            });
+        }
+    });
+
+    // Handle post card images
+    postCardImages.forEach(img => {
+        const container = img.parentElement;
+        if (!container) return;
+
+        container.classList.add('image-container');
+
+        if (!img.complete) {
+            container.classList.add('loading');
+            img.addEventListener('load', () => {
+                container.classList.remove('loading');
+            });
+            img.addEventListener('error', () => {
+                container.classList.remove('loading');
+            });
+        }
+    });
+}
+
+// Register Service Worker
+function initServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('ServiceWorker registered:', registration.scope);
+                })
+                .catch(error => {
+                    console.log('ServiceWorker registration failed:', error);
+                });
+        });
+    }
+}
+
 // Initialize all functions when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
+    initDarkMode();
     initHeader();
     initMobileMenu();
     initAnimations(); // Re-enabled with image protection
@@ -471,7 +685,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
     initLoadMore();
     updateCopyrightYear();
-    
+    initShareButtons();
+    initBackToTop();
+    initImageSkeletons();
+    initServiceWorker();
 });
 
 // Handle window resize

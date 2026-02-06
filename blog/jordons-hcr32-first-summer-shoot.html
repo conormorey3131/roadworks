@@ -15,9 +15,9 @@
     <link rel="dns-prefetch" href="../public/cars/jordons-hcr32/">
     
     <!-- Preload critical images to prevent browser interventions -->
-    <link rel="preload" as="image" href="../public/cars/jordons-hcr32/01.jpg" fetchpriority="high">
-    <link rel="preload" as="image" href="../public/cars/jordons-hcr32/02.jpg" fetchpriority="high">
-    <link rel="preload" as="image" href="../public/cars/jordons-hcr32/03.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="../public/cars/jordons-hcr32/01.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../public/cars/jordons-hcr32/02.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../public/cars/jordons-hcr32/03.webp" fetchpriority="high">
     
     <title>Jordon's HCR32 - First Summer Shoot | Roadworks IRE</title>
     <meta name="description" content="First of my summer shoots and it's with Jordon's HCR32. Featuring Work CR Kai wheels, Brix 1.5's, Nardi steering wheel, and PS Duce aero kit.">
@@ -89,19 +89,23 @@
     }
     </script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="preload" href="../js/main.js" as="script">
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/styles.css">
-    
+
 </head>
 <body>
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
     <!-- Progress Bar -->
     <div class="progress-bar">
         <div class="progress-bar-fill"></div>
@@ -124,8 +128,16 @@
                     <a href="../sunroof.html" class="nav-link">Sunroof</a>
                     <a href="../projects.html" class="nav-link">Projects</a>
                     <a href="../events.html" class="nav-link">Events</a>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle ml-2" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,16 +162,39 @@
                     <a href="../projects.html" class="mobile-nav-link">Projects</a>
                     <a href="../events.html" class="mobile-nav-link">Events</a>
                 </nav>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <button id="mobile-dark-mode-toggle" class="flex items-center justify-between w-full px-3 py-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors">
+                        <span class="font-medium">Dark Mode</span>
+                        <div class="relative">
+                            <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative h-[60vh] max-h-[700px] sm:h-[70vh] md:h-screen flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="../public/cars/jordons-hcr32/01.jpg" alt="Jordon's HCR32 - Front view" class="w-full h-full object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px" decoding="sync" fetchpriority="high" loading="eager">
+                <img
+                    src="../public/cars/jordons-hcr32/01.webp"
+                    srcset="../public/cars/jordons-hcr32/01-md.webp 800w,
+                            ../public/cars/jordons-hcr32/01-lg.webp 1200w,
+                            ../public/cars/jordons-hcr32/01.webp 1600w"
+                    sizes="100vw"
+                    alt="Jordon's HCR32 - Hero shot"
+                    class="w-full h-full object-cover"
+                    decoding="sync"
+                    fetchpriority="high"
+                    loading="eager">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
             </div>
             
@@ -195,49 +230,406 @@
                             View on Instagram
                         </a>
                     </div>
-                    
+
+                    <!-- Share Buttons -->
+                    <div class="my-8 p-6 bg-gray-50 rounded-lg">
+                        <h3 class="font-display text-xl mb-4 text-center">Share This Post</h3>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <button data-share="copy" class="inline-flex items-center px-4 py-2 bg-gray-700 text-white font-medium rounded-full hover:bg-gray-800 transition-all duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                                </svg>
+                                Copy Link
+                            </button>
+                            <a data-share="whatsapp" href="#" class="inline-flex items-center px-4 py-2 bg-[#25D366] text-white font-medium rounded-full hover:bg-[#128C7E] transition-all duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                            <a data-share="twitter" href="#" class="inline-flex items-center px-4 py-2 bg-black text-white font-medium rounded-full hover:bg-gray-900 transition-all duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                X / Twitter
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Post Navigation -->
+                    <div class="mt-16 pt-8 border-t border-gray-200">
+                        <div class="flex justify-between items-center">
+                            <a href="andrews-sierra-sr20-bmw-box.html" class="group flex items-center text-gray-600 hover:text-theme transition-colors">
+                                <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                                <span>Andrew's Sierra</span>
+                            </a>
+                            <a href="shanes-jzx81-long-time-in-the-making.html" class="group flex items-center text-gray-600 hover:text-theme transition-colors">
+                                <span class="mr-2">Shane's JZX81</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Gallery Section -->
                     <div class="mt-16 fade-in">
                         <h2 class="font-display text-3xl md:text-4xl mb-8 text-center">Gallery</h2>
                         <p class="text-center text-gray-600 mb-8">Click any image to view in full size</p>
-                        
+
                         <div class="gallery-grid" id="gallery">
-                            <!-- 28 Images -->
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/01.jpg" alt="Jordon's HCR32 - Image 1" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/02.jpg" alt="Jordon's HCR32 - Image 2" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/03.jpg" alt="Jordon's HCR32 - Image 3" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/04.jpg" alt="Jordon's HCR32 - Image 4" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/05.jpg" alt="Jordon's HCR32 - Image 5" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/06.jpg" alt="Jordon's HCR32 - Image 6" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/07.jpg" alt="Jordon's HCR32 - Image 7" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/08.jpg" alt="Jordon's HCR32 - Image 8" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/09.jpg" alt="Jordon's HCR32 - Image 9" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/10.jpg" alt="Jordon's HCR32 - Image 10" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/11.jpg" alt="Jordon's HCR32 - Image 11" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/12.jpg" alt="Jordon's HCR32 - Image 12" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/13.jpg" alt="Jordon's HCR32 - Image 13" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/14.jpg" alt="Jordon's HCR32 - Image 14" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/15.jpg" alt="Jordon's HCR32 - Image 15" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/16.jpg" alt="Jordon's HCR32 - Image 16" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/17.jpg" alt="Jordon's HCR32 - Image 17" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/18.jpg" alt="Jordon's HCR32 - Image 18" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/19.jpg" alt="Jordon's HCR32 - Image 19" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/20.jpg" alt="Jordon's HCR32 - Image 20" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/21.jpg" alt="Jordon's HCR32 - Image 21" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/22.jpg" alt="Jordon's HCR32 - Image 22" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/23.jpg" alt="Jordon's HCR32 - Image 23" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/24.jpg" alt="Jordon's HCR32 - Image 24" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/25.jpg" alt="Jordon's HCR32 - Image 25" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/26.jpg" alt="Jordon's HCR32 - Image 26" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/27.jpg" alt="Jordon's HCR32 - Image 27" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
-                            <div class="gallery-item"><img src="../public/cars/jordons-hcr32/28.jpg" alt="Jordon's HCR32 - Image 28" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="sync" fetchpriority="high"></div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/01.webp"
+                                    srcset="../public/cars/jordons-hcr32/01-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/01-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/01-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/01.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 1"
+                                    loading="eager"
+                                    decoding="sync" fetchpriority="high">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/02.webp"
+                                    srcset="../public/cars/jordons-hcr32/02-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/02-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/02-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/02.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 2"
+                                    loading="eager"
+                                    decoding="sync" fetchpriority="high">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/03.webp"
+                                    srcset="../public/cars/jordons-hcr32/03-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/03-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/03-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/03.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 3"
+                                    loading="eager"
+                                    decoding="sync" fetchpriority="high">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/04.webp"
+                                    srcset="../public/cars/jordons-hcr32/04-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/04-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/04-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/04.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 4"
+                                    loading="eager"
+                                    decoding="sync" fetchpriority="high">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/05.webp"
+                                    srcset="../public/cars/jordons-hcr32/05-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/05-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/05-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/05.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 5"
+                                    loading="eager"
+                                    decoding="sync" fetchpriority="high">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/06.webp"
+                                    srcset="../public/cars/jordons-hcr32/06-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/06-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/06-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/06.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 6"
+                                    loading="eager"
+                                    decoding="sync" fetchpriority="high">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/07.webp"
+                                    srcset="../public/cars/jordons-hcr32/07-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/07-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/07-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/07.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 7"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/08.webp"
+                                    srcset="../public/cars/jordons-hcr32/08-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/08-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/08-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/08.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 8"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/09.webp"
+                                    srcset="../public/cars/jordons-hcr32/09-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/09-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/09-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/09.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 9"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/10.webp"
+                                    srcset="../public/cars/jordons-hcr32/10-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/10-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/10-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/10.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 10"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/11.webp"
+                                    srcset="../public/cars/jordons-hcr32/11-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/11-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/11-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/11.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 11"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/12.webp"
+                                    srcset="../public/cars/jordons-hcr32/12-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/12-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/12-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/12.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 12"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/13.webp"
+                                    srcset="../public/cars/jordons-hcr32/13-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/13-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/13-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/13.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 13"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/14.webp"
+                                    srcset="../public/cars/jordons-hcr32/14-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/14-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/14-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/14.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 14"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/15.webp"
+                                    srcset="../public/cars/jordons-hcr32/15-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/15-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/15-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/15.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 15"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/16.webp"
+                                    srcset="../public/cars/jordons-hcr32/16-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/16-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/16-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/16.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 16"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/17.webp"
+                                    srcset="../public/cars/jordons-hcr32/17-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/17-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/17-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/17.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 17"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/18.webp"
+                                    srcset="../public/cars/jordons-hcr32/18-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/18-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/18-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/18.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 18"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/19.webp"
+                                    srcset="../public/cars/jordons-hcr32/19-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/19-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/19-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/19.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 19"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/20.webp"
+                                    srcset="../public/cars/jordons-hcr32/20-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/20-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/20-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/20.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 20"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/21.webp"
+                                    srcset="../public/cars/jordons-hcr32/21-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/21-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/21-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/21.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 21"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/22.webp"
+                                    srcset="../public/cars/jordons-hcr32/22-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/22-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/22-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/22.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 22"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/23.webp"
+                                    srcset="../public/cars/jordons-hcr32/23-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/23-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/23-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/23.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 23"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/24.webp"
+                                    srcset="../public/cars/jordons-hcr32/24-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/24-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/24-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/24.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 24"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/25.webp"
+                                    srcset="../public/cars/jordons-hcr32/25-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/25-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/25-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/25.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 25"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/26.webp"
+                                    srcset="../public/cars/jordons-hcr32/26-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/26-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/26-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/26.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 26"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/27.webp"
+                                    srcset="../public/cars/jordons-hcr32/27-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/27-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/27-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/27.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 27"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
+                            <div class="gallery-item">
+                                <img
+                                    src="../public/cars/jordons-hcr32/28.webp"
+                                    srcset="../public/cars/jordons-hcr32/28-sm.webp 480w,
+                                            ../public/cars/jordons-hcr32/28-md.webp 800w,
+                                            ../public/cars/jordons-hcr32/28-lg.webp 1200w,
+                                            ../public/cars/jordons-hcr32/28.webp 1600w"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    alt="Jordon's HCR32 - Image 28"
+                                    loading="lazy"
+                                    decoding="async">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </article>
     </main>
-    
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <div class="lightbox-content">
