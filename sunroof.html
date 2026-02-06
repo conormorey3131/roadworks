@@ -10,18 +10,23 @@
     <link rel="icon" type="image/png" href="public/brand/logo.png">
     <link rel="shortcut icon" type="image/png" href="public/brand/logo.png">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
     <!-- Header -->
     <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300 scrolled">
         <div class="container max-w-7xl mx-auto px-4">
@@ -39,8 +44,16 @@
                     <a href="sunroof.html" class="nav-link active">Sunroof</a>
                     <a href="projects.html" class="nav-link ">Projects</a>
                     <a href="events.html" class="nav-link ">Events</a>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle ml-2" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,12 +78,25 @@
                     <a href="projects.html" class="mobile-nav-link ">Projects</a>
                     <a href="events.html" class="mobile-nav-link ">Events</a>
                 </nav>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <button id="mobile-dark-mode-toggle" class="flex items-center justify-between w-full px-3 py-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors">
+                        <span class="font-medium">Dark Mode</span>
+                        <div class="relative">
+                            <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Main Content -->
-    <main class="pt-20">
+    <main id="main-content" class="pt-20">
         <div class="coming-soon-container">
             <div class="text-center max-w-2xl mx-auto">
                 <div class="fade-in-scale mb-8">
@@ -100,7 +126,14 @@
             </div>
         </div>
     </main>
-    
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
     <!-- Footer -->
     <footer class="bg-black text-white">
         <div class="container max-w-7xl mx-auto px-4 py-12">

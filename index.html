@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadworks IRE - Premium Automotive Content Ireland | Andrew's Sierra SR20 Feature</title>
-    <meta name="description" content="Roadworks IRE showcases Ireland's finest automotive builds. Latest: Andrew's incredible Sierra with SR20 power and BMW gearbox conversion.">
-    <meta name="keywords" content="Roadworks IRE, Irish car culture, Josh Juicebox S15, Nissan Silvia S15 Ireland, automotive photography, car builds Ireland, drift cars Ireland, JDM Ireland, modified cars Ireland">
+    <title>Roadworks IRE - Premium Automotive Content Ireland | Garry's IS200 Feature</title>
+    <meta name="description" content="Roadworks IRE showcases Ireland's finest automotive builds. Latest: Garry's ring-ready IS200 with Vertex V2, Kaaz diff, and BC coilovers.">
+    <meta name="keywords" content="Roadworks IRE, Irish car culture, Lexus IS200 Ireland, Garry IS200, automotive photography, car builds Ireland, drift cars Ireland, JDM Ireland, modified cars Ireland, Nurburgring">
     <meta name="author" content="Noah - Roadworks IRE">
     <link rel="canonical" href="https://roadworksire.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://roadworksire.com/">
-    <meta property="og:title" content="Roadworks IRE - Andrew's Sierra SR20 Featured">
-    <meta property="og:description" content="Premium automotive content from Ireland. Latest: Andrew's incredible Sierra with SR20 power and BMW gearbox conversion.">
-    <meta property="og:image" content="https://roadworksire.com/public/cars/featured-build-01/01.jpg">
+    <meta property="og:title" content="Roadworks IRE - Garry's IS200 Featured">
+    <meta property="og:description" content="Premium automotive content from Ireland. Latest: Garry's ring-ready IS200 with Vertex V2, Kaaz diff, and BC coilovers.">
+    <meta property="og:image" content="https://roadworksire.com/public/cars/gearoids-is200/01.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Roadworks IRE">
@@ -23,9 +23,9 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://roadworksire.com/">
-    <meta name="twitter:title" content="Roadworks IRE - Josh's S15 Silvia from Juicebox">
-    <meta name="twitter:description" content="Premium automotive content from Ireland featuring Josh's S15 Silvia build (Juicebox).">
-    <meta name="twitter:image" content="https://roadworksire.com/public/cars/featured-build-01/01.jpg">
+    <meta name="twitter:title" content="Roadworks IRE - Garry's IS200 Featured">
+    <meta name="twitter:description" content="Premium automotive content from Ireland. Latest: Garry's ring-ready IS200.">
+    <meta name="twitter:image" content="https://roadworksire.com/public/cars/gearoids-is200/01.webp">
     
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -61,18 +61,23 @@
     }
     </script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
     <!-- Header -->
     <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300">
         <div class="container max-w-7xl mx-auto px-4">
@@ -90,8 +95,16 @@
                     <a href="sunroof.html" class="nav-link">Sunroof</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="events.html" class="nav-link">Events</a>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle ml-2" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,12 +129,25 @@
                     <a href="projects.html" class="mobile-nav-link">Projects</a>
                     <a href="events.html" class="mobile-nav-link">Events</a>
                 </nav>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <button id="mobile-dark-mode-toggle" class="flex items-center justify-between w-full px-3 py-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors">
+                        <span class="font-medium">Dark Mode</span>
+                        <div class="relative">
+                            <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="hero relative h-[70vh] max-h-[800px] sm:h-[75vh] md:h-screen flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
@@ -152,20 +178,20 @@
                 
                 <!-- Featured Post -->
                 <div class="fade-in">
-                    <a href="blog/andrews-sierra-sr20-bmw-box.html" class="post-card featured group">
+                    <a href="blog/garrys-is200-ring-ready.html" class="post-card featured group">
                         <div class="relative aspect-[21/9] overflow-hidden bg-gray-100">
-                            <img src="public/cars/andrews-sierra/01.jpg" alt="Andrew's Sierra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="public/cars/gearoids-is200/01.webp" alt="Garry's IS200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-theme text-white px-3 py-1 rounded-full text-sm font-semibold">Latest</span>
                             </div>
                             <div class="absolute bottom-4 left-4 right-4 text-white">
-                                <h3 class="font-display text-3xl md:text-4xl mb-2">Andrew's Sierra: SR20 power and a BMW box</h3>
-                                <p class="text-white/90 mb-2 max-w-2xl">Andrew's incredible Sierra with a spicy SR20 under the bonnet mated to a 8hp BMW box. A long time in the making to where it is now.</p>
+                                <h3 class="font-display text-3xl md:text-4xl mb-2">Garry's IS200: Ring Ready and Road Tested</h3>
+                                <p class="text-white/90 mb-2 max-w-2xl">Vertex V2 front, Hipposleek sides, TRD rear, Kaaz 2-way diff. A true ring-tested machine that's clipped every ditch between here and Donegal.</p>
                                 <div class="flex items-center text-sm text-white/80 space-x-4">
-                                    <span>January 29, 2026</span>
-                                    <span>2 min read</span>
-                                    <span>27 Images</span>
+                                    <span>February 6, 2026</span>
+                                    <span>3 min read</span>
+                                    <span>34 Images</span>
                                 </div>
                             </div>
                         </div>
@@ -233,18 +259,25 @@
                         <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" class="btn btn-outline group">
                             INSTAGRAM
                         </a>
-                        <a href="#" class="btn btn-outline group">
-                            YOUTUBE (COMING SOON)
-                        </a>
-                        <a href="#" class="btn btn-outline group">
-                            ICCR (COMING SOON)
-                        </a>
+                        <span class="btn btn-outline opacity-50 cursor-not-allowed" title="Coming Soon">
+                            YOUTUBE
+                        </span>
+                        <span class="btn btn-outline opacity-50 cursor-not-allowed" title="Coming Soon">
+                            ICCR
+                        </span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
     <!-- Footer -->
     <footer class="bg-black text-white">
         <div class="container max-w-7xl mx-auto px-4 py-12">
@@ -254,8 +287,8 @@
                     <p class="text-gray-400 mb-4">Where Performance Meets Passion. Follow our journey through the world of automotive excellence.</p>
                     <div class="flex space-x-4">
                         <a href="https://www.instagram.com/roadworks.ire/" target="_blank" class="text-gray-400 hover:text-white transition-colors">INSTAGRAM</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">YOUTUBE</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">ICCR</a>
+                        <span class="text-gray-600 cursor-not-allowed" title="Coming Soon">YOUTUBE</span>
+                        <span class="text-gray-600 cursor-not-allowed" title="Coming Soon">ICCR</span>
                     </div>
                 </div>
                 
