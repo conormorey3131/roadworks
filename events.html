@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | Roadworks IRE</title>
-    <meta name="description" content="Track days, meet-ups, and automotive gatherings">
+    <title>Events | Car Shows, Meets & Track Days | Roadworks IRE</title>
+    <meta name="description" content="Coverage from Irish car shows, meets, and automotive events. Old School New School, track days, and community gatherings captured by Roadworks IRE.">
+    <meta name="keywords" content="Irish car shows, car meets Ireland, Old School New School, OSNS, automotive events Ireland, track days, Roadworks IRE events">
+    <link rel="canonical" href="https://roadworksire.com/events.html">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="public/brand/logo.png">
     <link rel="shortcut icon" type="image/png" href="public/brand/logo.png">
-    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Events - Car Shows, Meets & Track Days">
+    <meta property="og:description" content="Coverage from Irish car shows, meets, and automotive events captured by Roadworks IRE.">
+    <meta property="og:image" content="https://roadworksire.com/public/events/osns-2025/01.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Roadworks IRE Events",
+        "description": "Coverage from Irish car shows, meets, and automotive events",
+        "url": "https://roadworksire.com/events.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Roadworks IRE"
+        }
+    }
+    </script>
+
     <!-- Preload Critical Assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style">
     <link rel="preload" href="css/styles.css" as="style">
@@ -34,15 +57,15 @@
                 <a href="index.html" class="logo">
                     <span class="font-display text-2xl md:text-3xl tracking-wider">ROADWORKS IRE</span>
                 </a>
-                
+
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="intro.html" class="nav-link">Intro</a>
                     <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="featured-sheds.html" class="nav-link ">Featured Sheds</a>
-                    <a href="sunroof.html" class="nav-link ">Sunroof</a>
-                    <a href="projects.html" class="nav-link ">Projects</a>
+                    <a href="featured-sheds.html" class="nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="nav-link">Sunroof</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
                     <a href="events.html" class="nav-link active">Events</a>
                     <button id="dark-mode-toggle" class="dark-mode-toggle ml-2" aria-label="Toggle dark mode">
                         <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,7 +86,7 @@
             </nav>
         </div>
     </header>
-    
+
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobile-menu-overlay"></div>
@@ -73,9 +96,9 @@
                     <a href="index.html" class="mobile-nav-link">Home</a>
                     <a href="intro.html" class="mobile-nav-link">Intro</a>
                     <a href="blog.html" class="mobile-nav-link">Blog</a>
-                    <a href="featured-sheds.html" class="mobile-nav-link ">Featured Sheds</a>
-                    <a href="sunroof.html" class="mobile-nav-link ">Sunroof</a>
-                    <a href="projects.html" class="mobile-nav-link ">Projects</a>
+                    <a href="featured-sheds.html" class="mobile-nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="mobile-nav-link">Sunroof</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
                     <a href="events.html" class="mobile-nav-link active">Events</a>
                 </nav>
                 <div class="mt-6 pt-6 border-t border-gray-200">
@@ -97,34 +120,31 @@
 
     <!-- Main Content -->
     <main id="main-content" class="pt-20">
-        <div class="coming-soon-container">
-            <div class="text-center max-w-2xl mx-auto">
-                <div class="fade-in-scale mb-8">
-                    <div class="coming-soon-badge">
-                        <h1 class="coming-soon-title font-display">COMING SOON</h1>
-                    </div>
+        <section class="py-12 px-4">
+            <div class="container max-w-7xl mx-auto">
+                <div class="mb-12 fade-in">
+                    <h1 class="font-display text-5xl md:text-6xl mb-4">Events</h1>
+                    <p class="text-gray-600 text-lg max-w-2xl">Car shows, meets, and track days from around Ireland. Where the community comes together.</p>
                 </div>
-                
-                <div class="fade-in">
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Events</h2>
-                    <p class="text-gray-600 mb-8 max-w-md mx-auto">
-                        Track days, meet-ups, and automotive gatherings. Join us for unforgettable experiences where the community comes together to celebrate our shared passion.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="blog.html" class="btn btn-theme">Read Our Blog</a>
-                        <a href="index.html" class="btn btn-outline">Back to Home</a>
-                    </div>
-                </div>
-                
-                <div class="mt-12 fade-in">
-                    <div class="inline-flex items-center space-x-2 text-sm text-gray-500">
-                        <div class="w-2 h-2 bg-theme rounded-full animate-pulse"></div>
-                        <span>Under Development</span>
-                    </div>
+
+                <!-- Events Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <!-- Old School New School 2025 -->
+                    <a href="events/osns-2025.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/events/osns-2025/25.webp" alt="Old School New School 2025" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Old School New School 2025</h3>
+                        <p class="text-gray-600 mb-2">First time attending OSNS at St Mel's College, Longford. Fantastic variety of cars, great backdrops, music and entertainment.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>Summer 2025</span>
+                            <span>79 photos</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Back to Top Button -->
@@ -135,16 +155,46 @@
     </button>
 
     <!-- Footer -->
-    <footer class="bg-black text-white">
+    <footer class="bg-black text-white mt-20">
         <div class="container max-w-7xl mx-auto px-4 py-12">
-            <div class="text-center">
-                <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
-                <p class="text-gray-400">© <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
-                <p class="text-gray-400 text-sm">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
+                    <p class="text-gray-400 mb-4">Where Performance Meets Passion. Follow our journey through the world of automotive excellence.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/roadworks.ire/" target="_blank" class="text-gray-400 hover:text-white transition-colors">INSTAGRAM</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">YOUTUBE</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">ICCR</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <nav class="flex flex-col space-y-2">
+                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                        <a href="featured-sheds.html" class="text-gray-400 hover:text-white transition-colors">Featured Sheds</a>
+                        <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                        <a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <nav class="flex flex-col space-y-2">
+                        <a href="intro.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                        <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
             </div>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
