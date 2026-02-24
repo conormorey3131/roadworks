@@ -79,6 +79,16 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Skip to Content (Accessibility) -->
@@ -162,7 +172,21 @@
                 
                 <!-- Blog Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <!-- Team Fool JZX - Newest -->
+                    <!-- Summer Nights - Newest -->
+                    <a href="blog/summer-nights.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/summerNIghts/01.webp" alt="Summer Nights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Summer Nights</h3>
+                        <p class="text-gray-600 mb-2">No plan, no problem. Last minute spins up the hills, chasing the sun, and photographing the cars close to home.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>February 24, 2026</span>
+                            <span>2 min read</span>
+                        </div>
+                    </a>
+
+                    <!-- Team Fool JZX -->
                     <a href="blog/team-fool-jzx.html" class="post-card group fade-in">
                         <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
                             <img src="public/cars/jzx/24.webp" alt="Team Fool JZX" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
@@ -273,41 +297,17 @@
 
     <!-- Footer -->
     <footer class="bg-black text-white mt-20">
-        <div class="container max-w-7xl mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
-                    <p class="text-gray-400 mb-4">Where Performance Meets Passion. Follow our journey through the world of automotive excellence.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/roadworks.ire/" target="_blank" class="text-gray-400 hover:text-white transition-colors">INSTAGRAM</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">YOUTUBE</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">ICCR</a>
-                    </div>
+        <div class="md-min-footer">
+            <div class="md-min-footer-inner">
+                <div class="md-min-footer-social">
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
                 </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <nav class="flex flex-col space-y-2">
-                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
-                        <a href="featured-sheds.html" class="text-gray-400 hover:text-white transition-colors">Featured Sheds</a>
-                        <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Projects</a>
-                        <a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a>
-                    </nav>
+                <div class="md-min-footer-info">
+                    <p>&copy; <span id="copyright-year">2026</span> Roadworks IRE</p>
+                    <p>Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a></p>
                 </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Connect</h4>
-                    <nav class="flex flex-col space-y-2">
-                        <a href="intro.html" class="text-gray-400 hover:text-white transition-colors">About</a>
-                        <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
-                    </nav>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">© <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
-                <p class="text-gray-400 text-sm mt-4 md:mt-0">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
             </div>
         </div>
     </footer>

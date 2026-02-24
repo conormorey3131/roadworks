@@ -22,6 +22,16 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Skip to Content (Accessibility) -->
@@ -136,11 +146,17 @@
 
     <!-- Footer -->
     <footer class="bg-black text-white">
-        <div class="container max-w-7xl mx-auto px-4 py-12">
-            <div class="text-center">
-                <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
-                <p class="text-gray-400 mb-2">© <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
-                <p class="text-gray-400 text-sm">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
+        <div class="md-min-footer">
+            <div class="md-min-footer-inner">
+                <div class="md-min-footer-social">
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+                <div class="md-min-footer-info">
+                    <p>&copy; <span id="copyright-year">2026</span> Roadworks IRE</p>
+                    <p>Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a></p>
+                </div>
             </div>
         </div>
     </footer>
