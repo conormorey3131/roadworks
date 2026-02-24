@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="only light">
+    <meta name="color-scheme" content="light dark">
     <meta http-equiv="origin-trial" content="disabled">
     <meta name="save-data" content="off">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -122,6 +122,15 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/styles.css">
 
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Skip to Content (Accessibility) -->
@@ -229,31 +238,91 @@
                     <p class="mb-6 text-gray-700 leading-relaxed fade-in">
                         This shoot is about 3 years in the making. Growing up there wasn't many Irish car YouTube channels and <strong>Juicebox</strong> was one. The first video I ever watched was <strong>Josh's E30</strong> being driven for the first time. Fast forward a couple years I met him at the first LZ World Tour where he had unveiled the S15 for the first time. We hit it off from there and now with me finished school and having my license it gave me the ability to call down to himself and Flip to shoot the 15.
                     </p>
-                    
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/featured-build-01/03.webp"
+                            alt="Josh's S15 Silvia"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <h2 class="font-display text-3xl md:text-4xl mt-12 mb-6 fade-in">The Build</h2>
                     <p class="mb-6 text-gray-700 leading-relaxed fade-in">
                         The car itself is one of the nicest S15 in Europe and arguably the world. Featuring a M-Sports front bumper and Vertex side skirts and rear bumper complemented by canards, it gives it the aggressive appearance that I and so many others love. It sits perfectly on a set of colour matched SSR Type-C's. The huge GT Style wing just adds to the early 2000's Japanese style.
                     </p>
-                    
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/featured-build-01/10.webp"
+                            alt="Josh's S15 exterior with M-Sports bumper and SSR Type-C wheels"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <h2 class="font-display text-3xl md:text-4xl mt-12 mb-6 fade-in">The Interior</h2>
                     <p class="mb-6 text-gray-700 leading-relaxed fade-in">
                         The cabin features a Juran GTX100 and Recaro and keeping you in place is a V Factory 4 point harness. The dash dodger adds to street drift car looking whilst also providing a massive safety feature.
                     </p>
-                    
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/featured-build-01/18.webp"
+                            alt="Josh's S15 interior"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <h2 class="font-display text-3xl md:text-4xl mt-12 mb-6 fade-in">Under the Hood</h2>
                     <p class="mb-6 text-gray-700 leading-relaxed fade-in">
                         Under the bonnet the SR20 has been appropriately tuned to 360hp with its rare mid-mount turbo set up giving the S15 its unique sound.
                     </p>
-                    
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/featured-build-01/25.webp"
+                            alt="Josh's S15 SR20 engine bay"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <h2 class="font-display text-3xl md:text-4xl mt-12 mb-6 fade-in">The Details</h2>
                     <p class="mb-6 text-gray-700 leading-relaxed fade-in">
                         The addition of the G-Corporation stickers, the D1 window banner, Defi Gauges, eye lids, M-Sports Plate, Garage Midnight stickers etc just perfect it.
                     </p>
-                    
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/featured-build-01/32.webp"
+                            alt="Josh's S15 details"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <p class="mb-6 text-gray-700 leading-relaxed fade-in">
                         <strong>Josh (Juicebox)</strong> has really built himself an absolute savage S15, I count myself very fortunate to have been able to shoot it and even get a little go at the summer bash. Thank you Josh for allowing me to shoot it and as always thanks to everyone and anyone who has read this far.
                     </p>
-                    
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/featured-build-01/38.webp"
+                            alt="Josh's S15 Silvia"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <p class="mb-6 text-gray-700 leading-relaxed fade-in italic">
                         // Noah
                     </p>
@@ -881,11 +950,17 @@
     
     <!-- Footer -->
     <footer class="bg-black text-white mt-20">
-        <div class="container max-w-7xl mx-auto px-4 py-12">
-            <div class="text-center">
-                <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
-                <p class="text-gray-400 mb-2">© <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
-                <p class="text-gray-400 text-sm">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
+        <div class="md-min-footer">
+            <div class="md-min-footer-inner">
+                <div class="md-min-footer-social">
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+                <div class="md-min-footer-info">
+                    <p>&copy; <span id="copyright-year">2026</span> Roadworks IRE</p>
+                    <p>Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a></p>
+                </div>
             </div>
         </div>
     </footer>

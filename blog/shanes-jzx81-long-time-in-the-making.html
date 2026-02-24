@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="only light">
+    <meta name="color-scheme" content="light dark">
     <meta http-equiv="origin-trial" content="disabled">
     <meta name="save-data" content="off">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -106,6 +106,15 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/styles.css">
 
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Skip to Content (Accessibility) -->
@@ -220,7 +229,17 @@
             <div class="container max-w-4xl mx-auto">
                 <div class="prose prose-lg mx-auto fade-in">
                     <p class="text-xl leading-relaxed mb-6">A car the originated in Japan, exported to Texas, imported to Galway and then into Shane's hands. Shane's fitted the kit in recent times and having had the 1J built to 530hp. It sits nicely on its RPF1's and on the rear.</p>
-                    
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/shanes-jzx81/10.webp"
+                            alt="Shane's JZX81"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <p class="text-lg leading-relaxed mb-6">One of my favourite cars this island has to offer. Once again I'd like to thank Shane for shooting the car and having me down and to anyone who has read this far too. Until then, Noah</p>
                     
                     <!-- Instagram Link -->
@@ -726,11 +745,17 @@
     
     <!-- Footer -->
     <footer class="bg-black text-white mt-20">
-        <div class="container max-w-7xl mx-auto px-4 py-12">
-            <div class="text-center">
-                <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
-                <p class="text-gray-400 mb-2">© <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
-                <p class="text-gray-400 text-sm">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
+        <div class="md-min-footer">
+            <div class="md-min-footer-inner">
+                <div class="md-min-footer-social">
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+                <div class="md-min-footer-info">
+                    <p>&copy; <span id="copyright-year">2026</span> Roadworks IRE</p>
+                    <p>Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a></p>
+                </div>
             </div>
         </div>
     </footer>

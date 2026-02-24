@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="only light">
+    <meta name="color-scheme" content="light dark">
     <meta http-equiv="origin-trial" content="disabled">
     <meta name="save-data" content="off">
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -106,6 +106,15 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/styles.css">
 
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Skip to Content (Accessibility) -->
@@ -218,11 +227,51 @@
                 <div class="prose prose-lg mx-auto fade-in">
                     <p class="text-xl leading-relaxed mb-6">I was given the opportunity to drive my good mates EP3 Type R a couple of weeks ago. This thing is the definition of an anti christ.</p>
 
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/seans-ep3/05.webp"
+                            alt="Sean's EP3 Type R"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <p class="text-lg leading-relaxed mb-6">Sean has spared no expense with this build. Under the bonnet is a 260hp K24 Frank built by no other than @ismail_kira over in @nightshift_honda. The engine features Tegiwa air intake and a Tegiwa manifold into a full custom exhaust by @conormccann96 and mapped by @cianwalshmotorworks.</p>
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/seans-ep3/12.webp"
+                            alt="Sean's EP3 Type R engine bay"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
 
                     <p class="text-lg leading-relaxed mb-6">The interior remains fairly mild (for now), but the rear seats have been deleted to save weight. The car sits on a lovely set of Evo 8 Enkeis whilst Yellowspeed Coliovers off an Ex BTCC Touring car keep the car planted round Mondello.</p>
 
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/seans-ep3/20.webp"
+                            alt="Sean's EP3 Type R on Evo 8 Enkeis"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
                     <p class="text-lg leading-relaxed mb-6">Maxton Designs Kit adds enough of a lip round the car to give it a more edgy look. I can't thank Sean enough for entrusting me with his EP3. A man not scared to drive it on.</p>
+
+                    <!-- Inline Image -->
+                    <div class="my-8 rounded-lg overflow-hidden">
+                        <img
+                            src="../public/cars/seans-ep3/28.webp"
+                            alt="Sean's EP3 Type R with Maxton Designs kit"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
 
                     <p class="text-lg leading-relaxed mb-6">As always, thank you all for reading this far. Big things planned for year, plans are in motion // Noah</p>
 
@@ -583,11 +632,17 @@
 
     <!-- Footer -->
     <footer class="bg-black text-white mt-20">
-        <div class="container max-w-7xl mx-auto px-4 py-12">
-            <div class="text-center">
-                <h3 class="font-display text-3xl mb-4">ROADWORKS IRE</h3>
-                <p class="text-gray-400 mb-2">&copy; <span id="copyright-year">2026</span> Roadworks IRE. All rights reserved.</p>
-                <p class="text-gray-400 text-sm">Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer" class="text-theme hover:text-white transition-colors">Morey Digital</a></p>
+        <div class="md-min-footer">
+            <div class="md-min-footer-inner">
+                <div class="md-min-footer-social">
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+                <div class="md-min-footer-info">
+                    <p>&copy; <span id="copyright-year">2026</span> Roadworks IRE</p>
+                    <p>Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a></p>
+                </div>
             </div>
         </div>
     </footer>
