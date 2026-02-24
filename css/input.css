@@ -595,72 +595,9 @@ img {
     display: block;
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    .text-gray-700,
-    .text-gray-600,
-    .text-gray-500 {
-        color: #d1d5db;
-    }
-
-    .prose p,
-    .prose li,
-    .prose dd {
-        color: #e5e7eb;
-    }
-
-    .prose h1,
-    .prose h2,
-    .prose h3,
-    .prose h4,
-    .prose h5,
-    .prose h6 {
-        color: #f3f4f6;
-    }
-
-    .prose strong,
-    .prose b {
-        color: #f9fafb;
-    }
-
-    .bg-gray-50 {
-        background-color: rgba(31, 41, 55, 0.5);
-    }
-
-    .text-gray-900 {
-        color: #f3f4f6;
-    }
-
-    .post-card {
-        background: #1f2937;
-    }
-
-    .post-card h3 {
-        color: #f3f4f6;
-    }
-
-    .post-card p {
-        color: #d1d5db;
-    }
-
-    .prose a {
-        color: #60a5fa;
-    }
-
-    #mobile-menu-panel {
-        background: #1f2937;
-        color: #f3f4f6;
-    }
-
-    .mobile-nav-link {
-        color: #d1d5db;
-    }
-
-    .mobile-nav-link:hover {
-        background: #374151;
-        color: #f3f4f6;
-    }
-}
+/* Dark Mode Support - handled entirely via html.dark class (see below) */
+/* System preference (prefers-color-scheme) is detected by JS in main.js,
+   which adds/removes the 'dark' class on <html>. No @media query needed. */
 
 /* Image error state */
 .image-error {
