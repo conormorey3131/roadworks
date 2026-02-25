@@ -29,17 +29,23 @@ function initTheme() {
 // Header scroll effect
 function initHeader() {
     const header = document.getElementById('header');
+    const hasHero = document.querySelector('.hero');
     let lastScroll = 0;
-    
+
+    // Pages without a hero need the scrolled state always for visibility
+    if (!hasHero) {
+        header.classList.add('scrolled');
+    }
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
-        
+
         if (currentScroll > 10) {
             header.classList.add('scrolled');
-        } else {
+        } else if (hasHero) {
             header.classList.remove('scrolled');
         }
-        
+
         lastScroll = currentScroll;
     });
 }
