@@ -31,7 +31,7 @@ const posts = [
         carName: "Shane's JZX81"
     },
     {
-        file: 'featured-build-01.html',
+        file: 'joshs-s15.html',
         folder: 'featured-build-01',
         count: 40,
         carName: "Josh's S15"
