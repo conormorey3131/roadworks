@@ -24,7 +24,7 @@ roadworks/
 ├── projects.html           # Coming Soon page
 ├── events.html             # Coming Soon page
 ├── blog/
-│   └── featured-build-01.html  # Josh's S15 article with 40-image gallery
+│   └── joshs-s15.html          # Josh's S15 article with 40-image gallery
 ├── css/
 │   └── styles.css          # Custom styles and animations
 ├── js/
@@ -90,7 +90,7 @@ const featuredCar = {
 
 ### Creating New Blog Posts
 
-1. Copy `/blog/featured-build-01.html` as a template
+1. Copy `/blog/joshs-s15.html` as a template
 2. Update the content, title, and meta tags
 3. Add a link to the new post in `blog.html`
 4. Update the homepage if it should be featured
