@@ -50,6 +50,40 @@ function initHeader() {
     });
 }
 
+// Fix mobile viewport height issue (address bar show/hide causes resize)
+function initHeroHeightLock() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    // Only apply on mobile devices (under 768px)
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    // Check if browser supports svh units - if so, CSS handles it
+    const supportsSvh = CSS.supports('height', '100svh');
+    if (supportsSvh) return;
+
+    // Lock the hero height to prevent resize on mobile scroll
+    const currentHeight = hero.offsetHeight;
+    hero.style.setProperty('--hero-height', currentHeight + 'px');
+    hero.classList.add('height-locked');
+}
+
+// Handle orientation change - recalculate hero height
+function handleOrientationChange() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    // Remove lock, let it recalculate, then re-lock
+    hero.classList.remove('height-locked');
+    hero.style.removeProperty('--hero-height');
+
+    // Small delay to let the viewport settle
+    setTimeout(() => {
+        initHeroHeightLock();
+    }, 100);
+}
+
 // Mobile menu
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -683,6 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initDarkMode();
     initHeader();
+    initHeroHeightLock();
     initMobileMenu();
     initAnimations(); // Re-enabled with image protection
     initGallery();
@@ -696,6 +731,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initImageSkeletons();
     initServiceWorker();
 });
+
+// Handle orientation change for hero height
+window.addEventListener('orientationchange', handleOrientationChange);
 
 // Handle window resize
 window.addEventListener('resize', handleResize);
