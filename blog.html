@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ343JD17K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DJ343JD17K');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Blog Ireland | Josh's S15 Feature (Juicebox) | Roadworks IRE</title>
+    <meta name="description" content="Premium automotive content from Ireland. Featured: Josh's Nissan S15 Silvia (Juicebox) with 40-image gallery. Irish car culture, builds, and photography by Roadworks IRE.">
+    <meta name="keywords" content="automotive blog Ireland, Josh Juicebox S15, Irish car builds, JDM Ireland, drift cars, modified cars Ireland, Roadworks IRE blog">
+    <link rel="canonical" href="https://roadworksire.com/blog.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/brand/logo.png">
+    <link rel="shortcut icon" type="image/png" href="public/brand/logo.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Automotive Blog - Josh's S15 Feature (Juicebox)">
+    <meta property="og:description" content="Premium automotive content from Ireland featuring Josh's S15 Silvia (Juicebox) and more.">
+    <meta property="og:image" content="https://roadworksire.com/public/cars/featured-build-01/01.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Roadworks IRE Blog",
+        "description": "Premium automotive content from Ireland",
+        "url": "https://roadworksire.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Roadworks IRE"
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Sean's Honda Civic EP3 Type R",
+                "url": "https://roadworksire.com/blog/seans-ep3-type-r.html",
+                "image": "https://roadworksire.com/public/cars/seans-ep3/01.webp",
+                "datePublished": "2026-02-20",
+                "author": {
+                    "@type": "Person",
+                    "name": "Noah"
+                },
+                "about": {
+                    "@type": "Car",
+                    "name": "Sean's Honda Civic EP3 Type R",
+                    "owner": "Sean"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Josh from Juicebox's S15: Three Years in the Making",
+                "url": "https://roadworksire.com/blog/joshs-s15.html",
+                "image": "https://roadworksire.com/public/cars/featured-build-01/06.jpg",
+                "datePublished": "2024-01-26",
+                "author": {
+                    "@type": "Person",
+                    "name": "Noah"
+                },
+                "about": {
+                    "@type": "Car",
+                    "name": "Josh's Nissan S15 Silvia",
+                    "owner": "Josh (Juicebox)"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300 scrolled">
+        <div class="container max-w-7xl mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <a href="index.html" class="logo">
+                    <span class="font-display text-2xl md:text-3xl tracking-wider">ROADWORKS IRE</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="intro.html" class="nav-link">Intro</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="featured-sheds.html" class="nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="nav-link">Sunroof</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle ml-2" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobile-menu-overlay"></div>
+        <div class="absolute right-0 top-0 h-full w-64 bg-white shadow-2xl transform translate-x-full transition-transform" id="mobile-menu-panel">
+            <div class="p-4 pt-20">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                    <a href="intro.html" class="mobile-nav-link">Intro</a>
+                    <a href="blog.html" class="mobile-nav-link active">Blog</a>
+                    <a href="featured-sheds.html" class="mobile-nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="mobile-nav-link">Sunroof</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="events.html" class="mobile-nav-link">Events</a>
+                </nav>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <button id="mobile-dark-mode-toggle" class="flex items-center justify-between w-full px-3 py-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors">
+                        <span class="font-medium">Dark Mode</span>
+                        <div class="relative">
+                            <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="pt-20">
+        <section class="py-12 px-4">
+            <div class="container max-w-7xl mx-auto">
+                <div class="mb-12 fade-in">
+                    <h1 class="font-display text-5xl md:text-6xl mb-4">Blog</h1>
+                </div>
+                
+                <!-- Blog Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <!-- Summer Nights - Newest -->
+                    <a href="blog/summer-nights.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/summerNIghts/01.webp" alt="Summer Nights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Summer Nights</h3>
+                        <p class="text-gray-600 mb-2">No plan, no problem. Last minute spins up the hills, chasing the sun, and photographing the cars close to home.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>February 24, 2026</span>
+                            <span>2 min read</span>
+                        </div>
+                    </a>
+
+                    <!-- Team Fool JZX -->
+                    <a href="blog/team-fool-jzx.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/jzx/24.webp" alt="Team Fool JZX" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Team Fool - The Rise of JZX</h3>
+                        <p class="text-gray-600 mb-2">The rise of JZX chassis drifting at Mondello. Old school Greddy turbos, big power, and Team Fool.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>February 23, 2026</span>
+                            <span>3 min read</span>
+                        </div>
+                    </a>
+
+                    <!-- Sean's EP3 Type R -->
+                    <a href="blog/seans-ep3-type-r.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/seans-ep3/01.webp" alt="Sean's EP3 Type R" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Sean's Honda Civic EP3 Type R</h3>
+                        <p class="text-gray-600 mb-2">260hp K24 Frank built by @ismail_kira at Nightshift Honda. Evo 8 Enkeis, Yellowspeed Coilovers, Maxton Designs kit.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>February 20, 2026</span>
+                            <span>2 min read</span>
+                        </div>
+                    </a>
+
+                    <!-- Garry's IS200 -->
+                    <a href="blog/garrys-is200-ring-ready.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/gearoids-is200/01.webp" alt="Garry's IS200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Garry's IS200 - Ring Ready and Road Tested</h3>
+                        <p class="text-gray-600 mb-2">Vertex V2 front, Hipposleek sides, TRD rear, Kaaz 2-way diff. A true ring-tested machine.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>February 6, 2026</span>
+                            <span>3 min read</span>
+                        </div>
+                    </a>
+
+                    <!-- Andrew's Sierra -->
+                    <a href="blog/andrews-sierra-sr20-bmw-box.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/andrews-sierra/01.jpg" alt="Andrew's Sierra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Andrew's Sierra: SR20 power and a BMW box</h3>
+                        <p class="text-gray-600 mb-2">Andrew's incredible Sierra with a spicy SR20 under the bonnet and mated to a 8hp BMW box.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>January 29, 2026</span>
+                            <span>2 min read</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Jordon's HCR32 -->
+                    <a href="blog/jordons-hcr32-first-summer-shoot.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/jordons-hcr32/01.jpg" alt="Jordon's HCR32" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">First of my summer shoots and it's with Jordon's HCR32</h3>
+                        <p class="text-gray-600 mb-2">Jordon's R32 featuring Work CR Kai wheels, Brix 1.5's, Nardi steering wheel, and PS Duce aero.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>January 28, 2026</span>
+                            <span>2 min read</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Shane's JZX81 -->
+                    <a href="blog/shanes-jzx81-long-time-in-the-making.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/shanes-jzx81/01.jpg" alt="Shane's JZX81" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">A shoot that was a long time in the making, Shane's JZX81</h3>
+                        <p class="text-gray-600 mb-2">A car that originated in Japan, exported to Texas, imported to Galway and then into Shane's hands.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>January 27, 2026</span>
+                            <span>2 min read</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Josh's S15 - Original -->
+                    <a href="blog/joshs-s15.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/featured-build-01/01.jpg" alt="Josh's S15" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Josh's S15: Three Years in the Making</h3>
+                        <p class="text-gray-600 mb-2">Exclusive feature on Josh's legendary S15 Silvia (Juicebox). One of Europe's finest builds with 360hp SR20DET.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>January 26, 2024</span>
+                            <span>3 min read</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-20">
+        <div class="md-min-footer">
+            <div class="md-min-footer-inner">
+                <div class="md-min-footer-social">
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+                <div class="md-min-footer-info">
+                    <p>&copy; <span id="copyright-year">2026</span> Roadworks IRE</p>
+                    <p>Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Robots.txt for Roadworks IRE
+# https://roadworksire.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://roadworksire.com/sitemap.xml
+
+# Disallow admin or private areas (none currently)
+# Disallow: /admin/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ343JD17K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DJ343JD17K');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro | Roadworks IRE</title>
+    <meta name="description" content="Learn about Roadworks IRE - represent what it represents. Our mission, what we do, and how to join the journey.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/brand/logo.png">
+    <link rel="shortcut icon" type="image/png" href="public/brand/logo.png">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300 scrolled">
+        <div class="container max-w-7xl mx-auto px-4">
+            <nav class="flex items-center justify-between py-4">
+                <a href="index.html" class="logo">
+                    <span class="font-display text-2xl md:text-3xl tracking-wider">ROADWORKS IRE</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="intro.html" class="nav-link active">Intro</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="featured-sheds.html" class="nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="nav-link">Sunroof</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle ml-2" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobile-menu-overlay"></div>
+        <div class="absolute right-0 top-0 h-full w-64 bg-white shadow-2xl transform translate-x-full transition-transform" id="mobile-menu-panel">
+            <div class="p-4 pt-20">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                    <a href="intro.html" class="mobile-nav-link active">Intro</a>
+                    <a href="blog.html" class="mobile-nav-link">Blog</a>
+                    <a href="featured-sheds.html" class="mobile-nav-link">Featured Sheds</a>
+                    <a href="sunroof.html" class="mobile-nav-link">Sunroof</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="events.html" class="mobile-nav-link">Events</a>
+                </nav>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <button id="mobile-dark-mode-toggle" class="flex items-center justify-between w-full px-3 py-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors">
+                        <span class="font-medium">Dark Mode</span>
+                        <div class="relative">
+                            <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="relative h-[60vh] max-h-[700px] sm:h-[70vh] md:h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="public/intro/04.webp"
+                     alt="Roadworks IRE - Intro"
+                     class="w-full h-full object-cover"
+                     decoding="sync" fetchpriority="high" loading="eager">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+            </div>
+            <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto fade-in">
+                <h1 class="font-display text-5xl md:text-7xl lg:text-8xl mb-4">Intro</h1>
+                <p class="text-lg md:text-xl text-gray-200">represent what it represents</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="py-20 px-4">
+            <div class="container max-w-4xl mx-auto">
+
+                <div class="prose prose-lg max-w-none">
+                    <!-- Paragraph 1 -->
+                    <p class="mb-6 text-gray-700 leading-relaxed fade-in">Back in 2020, when Covid hit and we were all stuck at home I picked up a camera for the first time. Photography was always an unknown fascination with me. My father and uncle always were taking photos and always had a camera with them no matter what event we were going too. I grew up reading magazines too and I always lusted at the thought of writing for one. That opportunity came 2022 when I did a show report on DB on the Quay for Retro Classics Magazine. It was so cool to see my own work in print and on selves. I got the opportunity to document different shows and events around the country and it was such a cool buzz to see my name next to the "words and photos". But as with most print media nowadays, Retro Classics went into liquidation last year and I found myself with an itch that I couldn't scratch and that was to continue to write about shows and features but in a different way other than instagram. I felt like instagram wasn't doing enough to showcase what this country has to offer in terms of builds, shows, people and sheds.'</p>
+
+                    <!-- Photo after paragraph 1: 01.webp -->
+                    <div class="my-8 fade-in">
+                        <img
+                            src="public/intro/01.webp"
+                            alt="Roadworks IRE - Intro 1"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
+                    <!-- Paragraph 2 -->
+                    <p class="mb-6 text-gray-700 leading-relaxed fade-in">I was extremely fortunate in forth year of secondary school do my work experience with no other then Simon Deane of Deane Motors in Dublin. I started working for him the week he got handed the keys for the memory that is The Engine Block. What a fantastic opportunity that was, it was here Roadworks became what it is now. Roadworks meets began, supported by Simon and they were fantastic. I met a lot my friends and new people with those events and The Engine Block in general.</p>
+
+                    <!-- Photo after paragraph 2: 02.webp -->
+                    <div class="my-8 fade-in">
+                        <img
+                            src="public/intro/02.webp"
+                            alt="Roadworks IRE - Intro 2"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
+                    <!-- Paragraph 3 -->
+                    <p class="mb-6 text-gray-700 leading-relaxed fade-in">So what is Roadworks? Roadworks is my way of showing what Ireland has to offer in terms of car culture. I count myself very lucky that I'm a position to document what my friends own, the shows, track days and spins that are organised and my view of it all. I am surrounded by so many fantastic people that have allowed me to photograph their pride and joy or who have traveled up to Dublin/Wicklow for my meets or spins. I will always be forever thankful for those who have supported what I've done and what I'm trying to do, for all the people I've met along the way and the people who have stuck around to see this silly little photography turn into what it has. I look forward to seeing what the future has in store for and for all the people I'm yet to meet. As is always, thank you for reading this far // Noah</p>
+
+                    <!-- Photo after paragraph 3: 03.webp -->
+                    <div class="my-8 fade-in">
+                        <img
+                            src="public/intro/03.webp"
+                            alt="Roadworks IRE - Intro 3"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
+                    <!-- Note: 6 photos available (01-06.webp), 3 paragraphs present. Using first 3 photos. -->
+
+                    <div class="mt-12 p-8 bg-gray-50 rounded-lg text-center fade-in">
+                        <p class="text-lg font-semibold mb-2">Stay Connected</p>
+                        <p class="text-gray-600 mb-4">
+                            Follow us on social media for the latest updates, behind-the-scenes content, and exclusive insights into the world of Irish motorsports.
+                        </p>
+                        <div class="flex justify-center gap-4">
+                            <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" class="btn btn-theme">
+                                Follow us on Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+        <div class="md-min-footer">
+            <div class="md-min-footer-inner">
+                <div class="md-min-footer-social">
+                    <a href="https://www.instagram.com/roadworks.ire/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+                <div class="md-min-footer-info">
+                    <p>&copy; <span id="copyright-year">2026</span> Roadworks IRE</p>
+                    <p>Powered by <a href="https://moreydigital.ie" target="_blank" rel="noopener noreferrer">Morey Digital</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
