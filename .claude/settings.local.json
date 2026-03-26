@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(python -m http.server:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Cruz Invitational 2026 event and update site theme to purple\n\n- Create events/cruz-inv-2026.html with full event coverage and gallery\n- Update events.html with Cruz Invitational card\n- Change homepage hero to Cruz Invitational 2026\n- Update theme color from red \\(#B40F0E\\) to purple \\(#8B2BE2\\)\n- Update all blog posts with purple accent colors\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git config:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth status:*)"
+    ]
+  }
+}
