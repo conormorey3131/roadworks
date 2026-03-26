@@ -2,9 +2,9 @@
 
 // Featured Car Data
 const featuredCar = {
-    id: 'featured-build-01',
+    id: 'joshs-s15',
     name: "Josh's S15 Silvia",
-    slug: 'featured-build-01',
+    slug: 'joshs-s15',
     tagline: 'European Excellence Meets Japanese Heritage',
     themeColor: '#B40F0E',
     secondaryColor: '#8B0000',
