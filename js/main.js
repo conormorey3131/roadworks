@@ -2,13 +2,13 @@
 
 // Featured Car Data
 const featuredCar = {
-    id: 'cruz-inv-2026',
-    name: "Cruz Invitational 2026",
-    slug: 'cruz-inv-2026',
-    tagline: 'The First Cruz Drift Day at Kartworld, Cork',
-    themeColor: '#8B2BE2',
-    secondaryColor: '#6B21A8',
-    owner: 'Cruz',
+    id: 'chris-jzx90',
+    name: "Chris' 500hp JZX90",
+    slug: 'chris-jzx90',
+    tagline: 'BN Style, 1JZ Power, Bronze TE37s',
+    themeColor: '#B8860B',
+    secondaryColor: '#8B6914',
+    owner: 'Chris',
     ownerYoutube: ''
 };
 
