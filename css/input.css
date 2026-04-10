@@ -4,9 +4,9 @@
 
 /* Custom CSS Variables */
 :root {
-    --theme-color: 139, 43, 226;
-    --theme-hex: #8B2BE2;
-    --theme-dark: #6B21A8;
+    --theme-color: 184, 134, 11;
+    --theme-hex: #B8860B;
+    --theme-dark: #8B6914;
     --font-display: 'Bebas Neue', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
