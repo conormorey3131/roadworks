@@ -52,6 +52,12 @@
 
     <!-- Blog Posts -->
     <url>
+        <loc>https://roadworksire.com/blog/chris-jzx90.html</loc>
+        <lastmod>2026-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://roadworksire.com/blog/garrys-is200-ring-ready.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
