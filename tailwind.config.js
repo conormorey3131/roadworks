@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'theme': '#B8860B',
-        'theme-dark': '#8B6914',
+        'theme': '#FFFFFF',
+        'theme-dark': '#E5E5E5',
       },
       fontFamily: {
         'display': ['"Bebas Neue"', 'sans-serif'],

@@ -4,9 +4,9 @@
 
 /* Custom CSS Variables */
 :root {
-    --theme-color: 184, 134, 11;
-    --theme-hex: #B8860B;
-    --theme-dark: #8B6914;
+    --theme-color: 255, 255, 255;
+    --theme-hex: #FFFFFF;
+    --theme-dark: #E5E5E5;
     --font-display: 'Bebas Neue', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -1167,3 +1167,40 @@ html.dark .progress-bar {
         gap: 0.5rem;
     }
 }
+
+/* ===========================================================
+   WHEEL-WHITE ACCENT — legibility overrides
+   Accent is now #FFFFFF (var-driven). Where the accent was used as
+   text/icons on light backgrounds it would be invisible, so those
+   spots use dark ink in light mode and light ink in dark mode.
+   =========================================================== */
+.text-theme,
+.hover\:text-theme:hover,
+.group:hover .group-hover\:text-theme { color: #111827; }
+html.dark .text-theme,
+html.dark .hover\:text-theme:hover,
+html.dark .group:hover .group-hover\:text-theme { color: #f3f4f6; }
+
+.btn-theme { color: #111827; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); }
+.btn-theme:hover { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); }
+.btn-outline:hover { border-color: #111827; color: #111827; background: rgba(0, 0, 0, 0.04); }
+
+#header.scrolled .nav-link.active { color: #111827; }
+html.dark #header.scrolled .nav-link.active { color: #f3f4f6; }
+.mobile-nav-link.active { color: #111827; }
+html.dark .mobile-nav-link.active { color: #f3f4f6; }
+
+.section-card { color: #111827; border: 1px solid #e5e7eb; }
+.section-card .section-arrow { color: rgba(0, 0, 0, 0.45); }
+.section-card:hover .section-arrow { color: #111827; }
+
+.back-to-top { color: #111827; }
+.skip-to-content { color: #111827; }
+
+.coming-soon-title { color: #111827; }
+html.dark .coming-soon-title { color: #f3f4f6; }
+
+.progress-bar-fill { background: #111827; }
+html.dark .progress-bar-fill { background: #f3f4f6; }
+*:focus-visible { outline-color: #111827 !important; }
+html.dark *:focus-visible { outline-color: #f3f4f6 !important; }
