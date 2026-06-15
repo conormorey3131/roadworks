@@ -192,45 +192,32 @@ section.hero img {
     min-height: 100% !important;
 }
 
-/* ===========================================================
-   WHEEL-WHITE ACCENT — legibility overrides
-   Accent is now #FFFFFF (var-driven). Where the accent was used
-   as text/icons on light backgrounds it would be invisible, so
-   those spots use dark ink in light mode and light ink in dark mode.
-   =========================================================== */
-.text-theme,
-.hover\:text-theme:hover,
-.group:hover .group-hover\:text-theme { color: #111827; }
-html.dark .text-theme,
-html.dark .hover\:text-theme:hover,
-html.dark .group:hover .group-hover\:text-theme { color: #f3f4f6; }
-
-/* White buttons need a border + shadow so they read on white pages */
-.btn-theme { color: #111827; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
-.btn-theme:hover { box-shadow: 0 10px 25px rgba(0,0,0,.12); }
-.btn-outline:hover { border-color: #111827; color: #111827; background: rgba(0,0,0,.04); }
-
-/* Active nav links: keep white over the dark hero, dark once header is light */
-#header.scrolled .nav-link.active { color: #111827; }
-html.dark #header.scrolled .nav-link.active { color: #f3f4f6; }
-.mobile-nav-link.active { color: #111827; }
-html.dark .mobile-nav-link.active { color: #f3f4f6; }
-
-/* Section cards: near-white gradient now, so define edge + dark text */
-.section-card { color: #111827; border: 1px solid #e5e7eb; }
-.section-card .section-arrow { color: rgba(0,0,0,.45); }
-.section-card:hover .section-arrow { color: #111827; }
-
-/* White-circle / white-pill controls get dark content */
-.back-to-top { color: #111827; }
-.skip-to-content { color: #111827; }
-
-/* Large accent display text on the page background */
-.coming-soon-title { color: #111827; }
-html.dark .coming-soon-title { color: #f3f4f6; }
-
-/* Keep the scroll progress bar and focus rings visible (white was invisible on light) */
-.progress-bar-fill { background: #111827; }
-html.dark .progress-bar-fill { background: #f3f4f6; }
-*:focus-visible { outline-color: #111827 !important; }
-html.dark *:focus-visible { outline-color: #f3f4f6 !important; }
+/* === White-safe monochrome accent overrides (replaces gold) === */
+.text-theme,.hover\:text-theme:hover,.group:hover .group-hover\:text-theme{color:#111827 !important}
+.bg-theme{background-color:#ffffff !important}
+.btn-theme{background:#ffffff !important;color:#111827 !important;border:1px solid #d1d5db !important}
+.btn-theme:hover{background:#f3f4f6 !important;color:#111827 !important}
+.btn-outline:hover{border-color:#111827 !important;color:#111827 !important;background:rgba(0,0,0,.05) !important}
+.nav-link.active,.mobile-nav-link.active{background:rgba(127,127,127,.18) !important;color:inherit !important}
+.progress-bar-fill{background:#111827 !important}
+.back-to-top{background:#111827 !important;color:#ffffff !important}
+.back-to-top:hover{background:#000000 !important}
+.skip-to-content{background:#111827 !important;color:#ffffff !important}
+.spinner{border-top-color:#111827 !important}
+.coming-soon-title{color:#111827 !important}
+.section-card{background:linear-gradient(135deg,#1f2937,#111827) !important}
+.border-theme{border-color:#111827 !important}
+:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visible,.nav-link:focus-visible,.mobile-nav-link:focus-visible,.gallery-item:focus-visible{outline-color:#111827 !important}
+.bg-\[\#B8860B\]{background-color:#ffffff !important;color:#111827 !important;border:1px solid #d1d5db !important}
+.hover\:bg-\[\#8B6914\]:hover{background-color:#f3f4f6 !important}
+/* keep accents that sit on dark backgrounds light */
+footer .md-min-footer-info a{color:#ffffff !important}
+footer .md-min-footer-info a:hover{color:rgba(255,255,255,.7) !important}
+/* dark mode: accents flip to light for contrast */
+html.dark .text-theme,html.dark .hover\:text-theme:hover,html.dark .group:hover .group-hover\:text-theme{color:#f3f4f6 !important}
+html.dark .btn-theme{background:#1f2937 !important;color:#f3f4f6 !important;border-color:#374151 !important}
+html.dark .btn-theme:hover{background:#374151 !important}
+html.dark .progress-bar-fill{background:#f3f4f6 !important}
+html.dark .back-to-top{background:#f3f4f6 !important;color:#111827 !important}
+html.dark .coming-soon-title{color:#f3f4f6 !important}
+html.dark .btn-outline:hover{border-color:#f3f4f6 !important;color:#f3f4f6 !important}

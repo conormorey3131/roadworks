@@ -6,8 +6,8 @@ const featuredCar = {
     name: "Chris' 500hp JZX90",
     slug: 'chris-jzx90',
     tagline: 'BN Style, 1JZ Power, Bronze TE37s',
-    themeColor: '#B8860B',
-    secondaryColor: '#8B6914',
+    themeColor: '#FFFFFF',
+    secondaryColor: '#E5E5E5',
     owner: 'Chris',
     ownerYoutube: ''
 };
