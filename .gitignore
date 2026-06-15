@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Raw photo dumps (WhatsApp/source imports) — only processed images belong in public/cars/<slug>/
+public/cars/dave-jzx110/
+**/WhatsApp Image *
+**/WhatsApp Unknown *
