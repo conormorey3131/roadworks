@@ -10,7 +10,14 @@
       "Bash(git config:*)",
       "Bash(git remote add:*)",
       "Bash(git push:*)",
-      "Bash(gh auth status:*)"
+      "Bash(gh auth status:*)",
+      "Bash(xargs sed:*)",
+      "Bash(git commit -q -m ' *)",
+      "Bash(git fetch *)",
+      "Bash(git -c core.editor=true rebase origin/main)",
+      "Bash(git commit *)",
+      "Bash(xmllint --noout sitemap.xml)",
+      "Bash(git -c core.editor=true rebase --continue)"
     ]
   }
 }

@@ -42,6 +42,22 @@
         "blogPost": [
             {
                 "@type": "BlogPosting",
+                "headline": "Dave's JZX110 MKII - 600hp 1.5JZ, one of the best examples out there",
+                "url": "https://roadworksire.com/blog/daves-jzx110-mkii.html",
+                "image": "https://roadworksire.com/public/cars/daves-jzx110-mkii/01.jpg",
+                "datePublished": "2026-06-15",
+                "author": {
+                    "@type": "Person",
+                    "name": "Noah"
+                },
+                "about": {
+                    "@type": "Car",
+                    "name": "Dave's Toyota JZX110 Mark II",
+                    "owner": "Dave"
+                }
+            },
+            {
+                "@type": "BlogPosting",
                 "headline": "Chris' 500hp JZX90 Mark II",
                 "url": "https://roadworksire.com/blog/chris-jzx90.html",
                 "image": "https://roadworksire.com/public/cars/chris_jzx/01.webp",
@@ -94,8 +110,8 @@
     
     <!-- Preload Critical Assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="css/styles.css?v=1.0" as="style">
+    <link rel="preload" href="js/main.js?v=1.0" as="script">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,7 +119,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
 
     <!-- Prevent flash of wrong theme -->
     <script>
@@ -197,7 +213,21 @@
                 
                 <!-- Blog Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <!-- Chris' JZX90 - Newest -->
+                    <!-- Dave's JZX110 MKII - Newest -->
+                    <a href="blog/daves-jzx110-mkii.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/daves-jzx110-mkii/01.jpg" alt="Dave's JZX110 MKII" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Dave's JZX110 MKII — 600hp 1.5JZ, one of the best examples out there</h3>
+                        <p class="text-gray-600 mb-2">A phenomenal 600hp 1.5JZ build — fresh 2JZ block, Precision 6466 turbo, T&E Vertex aero and a rare 35th Anniversary grille.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>June 15, 2026</span>
+                            <span>3 min read</span>
+                        </div>
+                    </a>
+
+                    <!-- Chris' JZX90 -->
                     <a href="blog/chris-jzx90.html" class="post-card group fade-in">
                         <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
                             <img src="public/cars/chris_jzx/01.webp" alt="Chris' JZX90" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
@@ -352,6 +382,6 @@
     </footer>
     
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=1.0"></script>
 </body>
 </html>
