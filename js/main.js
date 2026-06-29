@@ -2,13 +2,13 @@
 
 // Featured Car Data
 const featuredCar = {
-    id: 'chris-jzx90',
-    name: "Chris' 500hp JZX90",
-    slug: 'chris-jzx90',
-    tagline: 'BN Style, 1JZ Power, Bronze TE37s',
-    themeColor: '#FFFFFF',
-    secondaryColor: '#E5E5E5',
-    owner: 'Chris',
+    id: 'lees-evo-9',
+    name: "Lee's Evo 9",
+    slug: 'lees-evo-9',
+    tagline: 'FQ-340, 5-year nut-and-bolt restoration',
+    themeColor: '#1E5BB8',
+    secondaryColor: '#143F82',
+    owner: 'Lee',
     ownerYoutube: ''
 };
 

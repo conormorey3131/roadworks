@@ -4,9 +4,9 @@
 
 /* Custom CSS Variables */
 :root {
-    --theme-color: 255, 255, 255;
-    --theme-hex: #FFFFFF;
-    --theme-dark: #E5E5E5;
+    --theme-color: 30, 91, 184;
+    --theme-hex: #1E5BB8;
+    --theme-dark: #143F82;
     --font-display: 'Bebas Neue', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -1167,33 +1167,3 @@ html.dark .progress-bar {
         gap: 0.5rem;
     }
 }
-
-/* === White-safe monochrome accent overrides (replaces gold) === */
-.text-theme,.hover\:text-theme:hover,.group:hover .group-hover\:text-theme{color:#111827 !important}
-.bg-theme{background-color:#ffffff !important}
-.btn-theme{background:#ffffff !important;color:#111827 !important;border:1px solid #d1d5db !important}
-.btn-theme:hover{background:#f3f4f6 !important;color:#111827 !important}
-.btn-outline:hover{border-color:#111827 !important;color:#111827 !important;background:rgba(0,0,0,.05) !important}
-.nav-link.active,.mobile-nav-link.active{background:rgba(127,127,127,.18) !important;color:inherit !important}
-.progress-bar-fill{background:#111827 !important}
-.back-to-top{background:#111827 !important;color:#ffffff !important}
-.back-to-top:hover{background:#000000 !important}
-.skip-to-content{background:#111827 !important;color:#ffffff !important}
-.spinner{border-top-color:#111827 !important}
-.coming-soon-title{color:#111827 !important}
-.section-card{background:linear-gradient(135deg,#1f2937,#111827) !important}
-.border-theme{border-color:#111827 !important}
-:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.btn:focus-visible,.nav-link:focus-visible,.mobile-nav-link:focus-visible,.gallery-item:focus-visible{outline-color:#111827 !important}
-.bg-\[\#B8860B\]{background-color:#ffffff !important;color:#111827 !important;border:1px solid #d1d5db !important}
-.hover\:bg-\[\#8B6914\]:hover{background-color:#f3f4f6 !important}
-/* keep accents that sit on dark backgrounds light */
-footer .md-min-footer-info a{color:#ffffff !important}
-footer .md-min-footer-info a:hover{color:rgba(255,255,255,.7) !important}
-/* dark mode: accents flip to light for contrast */
-html.dark .text-theme,html.dark .hover\:text-theme:hover,html.dark .group:hover .group-hover\:text-theme{color:#f3f4f6 !important}
-html.dark .btn-theme{background:#1f2937 !important;color:#f3f4f6 !important;border-color:#374151 !important}
-html.dark .btn-theme:hover{background:#374151 !important}
-html.dark .progress-bar-fill{background:#f3f4f6 !important}
-html.dark .back-to-top{background:#f3f4f6 !important;color:#111827 !important}
-html.dark .coming-soon-title{color:#f3f4f6 !important}
-html.dark .btn-outline:hover{border-color:#f3f4f6 !important;color:#f3f4f6 !important}

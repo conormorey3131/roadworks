@@ -12,9 +12,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automotive Blog Ireland | Chris' 500hp JZX90 Feature | Roadworks IRE</title>
-    <meta name="description" content="Premium automotive content from Ireland. Featured: Chris' 500hp JZX90 Mark II with 45-image gallery. Irish car culture, builds, and photography by Roadworks IRE.">
-    <meta name="keywords" content="automotive blog Ireland, Chris JZX90, 1JZ-GTE, Irish car builds, JDM Ireland, drift cars, modified cars Ireland, Roadworks IRE blog">
+    <title>Automotive Blog Ireland | Lee's Evo 9 FQ-340 Feature | Roadworks IRE</title>
+    <meta name="description" content="Premium automotive content from Ireland. Featured: Lee's Mitsubishi Evo 9 FQ-340 — a 5-year nut-and-bolt restoration to museum standard. Irish car culture, builds, and photography by Roadworks IRE.">
+    <meta name="keywords" content="automotive blog Ireland, Lee Evo 9, Mitsubishi Evo 9, Lancer Evolution IX, FQ-340, 4G63T, Irish car builds, JDM Ireland, modified cars Ireland, Roadworks IRE blog">
     <link rel="canonical" href="https://roadworksire.com/blog.html">
     
     <!-- Favicon -->
@@ -23,9 +23,9 @@
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Automotive Blog - Chris' 500hp JZX90 Feature">
-    <meta property="og:description" content="Premium automotive content from Ireland featuring Chris' 500hp JZX90 Mark II and more.">
-    <meta property="og:image" content="https://roadworksire.com/public/cars/chris_jzx/01.webp">
+    <meta property="og:title" content="Automotive Blog - Lee's Evo 9 FQ-340 Feature">
+    <meta property="og:description" content="Premium automotive content from Ireland featuring Lee's Mitsubishi Evo 9 FQ-340 restoration and more.">
+    <meta property="og:image" content="https://roadworksire.com/public/cars/lees-evo-9/01.jpg">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -40,6 +40,22 @@
             "name": "Roadworks IRE"
         },
         "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Lee's Evo 9 — an FQ-340 restored to museum standard",
+                "url": "https://roadworksire.com/blog/lees-evo-9.html",
+                "image": "https://roadworksire.com/public/cars/lees-evo-9/01.jpg",
+                "datePublished": "2026-06-29",
+                "author": {
+                    "@type": "Person",
+                    "name": "Noah"
+                },
+                "about": {
+                    "@type": "Car",
+                    "name": "Lee's Mitsubishi Lancer Evolution IX FQ-340",
+                    "owner": "Lee"
+                }
+            },
             {
                 "@type": "BlogPosting",
                 "headline": "Dave's JZX110 MKII - 600hp 1.5JZ, one of the best examples out there",
@@ -110,8 +126,8 @@
     
     <!-- Preload Critical Assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style">
-    <link rel="preload" href="css/styles.css?v=1.1" as="style">
-    <link rel="preload" href="js/main.js?v=1.1" as="script">
+    <link rel="preload" href="css/styles.css?v=1.2" as="style">
+    <link rel="preload" href="js/main.js?v=1.2" as="script">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +135,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <link rel="stylesheet" href="css/styles.css?v=1.2">
 
     <!-- Prevent flash of wrong theme -->
     <script>
@@ -213,7 +229,21 @@
                 
                 <!-- Blog Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <!-- Dave's JZX110 MKII - Newest -->
+                    <!-- Lee's Evo 9 - Newest -->
+                    <a href="blog/lees-evo-9.html" class="post-card group fade-in">
+                        <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
+                            <img src="public/cars/lees-evo-9/01.jpg" alt="Lee's Mitsubishi Evo 9 FQ-340" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                        <h3 class="font-display text-2xl mb-2 group-hover:text-theme transition-colors">Lee's Evo 9 — an FQ-340 restored to museum standard</h3>
+                        <p class="text-gray-600 mb-2">A Mitsubishi Evo 9 FQ-340 given a 5-year nut-and-bolt restoration — every nut, bolt and bushing brand new, on a Tomei turbo and exhaust.</p>
+                        <div class="flex items-center text-sm text-gray-500 space-x-4">
+                            <span>June 29, 2026</span>
+                            <span>2 min read</span>
+                        </div>
+                    </a>
+
+                    <!-- Dave's JZX110 MKII -->
                     <a href="blog/daves-jzx110-mkii.html" class="post-card group fade-in">
                         <div class="relative aspect-[16/9] overflow-hidden bg-gray-100 mb-4">
                             <img src="public/cars/daves-jzx110-mkii/01.jpg" alt="Dave's JZX110 MKII" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
@@ -382,6 +412,6 @@
     </footer>
     
     <!-- JavaScript -->
-    <script src="js/main.js?v=1.1"></script>
+    <script src="js/main.js?v=1.2"></script>
 </body>
 </html>
